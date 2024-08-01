@@ -1,0 +1,68 @@
+*Inchworm Problem:
+
+Initial thoughts: I noticed right away that there is a mathematical solution for this problem. Whenever the worm stops at a leaf, 
+it means the position of the leaf must be divisible by both the distance traveled between rests and the distance between each consecutive 
+pair of leaves. So I will find the lcm of above distances to get the distance between two consecutive leaves that the worm will eat. 
+Then the number of leaves the worm will eat is calculated by dividing the length of the branch by the distance between ( if not divisible floor the result).
+
+Reflection: I believe this is the most efficient solution to this problem. Using a brute force approach to solve this problem by 
+looping through the branch and checking each position may be simpler but its computational cost is high. Another thing is in my 
+script, I manually calculated the lcm( by finding the larger between two distances, if it is not divisible by the smaller, keep adding 
+the larger itself until it is divisible)  although I could use the lcm() function from the cmath library. I will remember this function to use it next time. 
+
+
+*ThrowTheBall Problem:
+
+Initial thoughts: There is a brute force approach to solve this problem. I noticed that for the ball to be returned to player 1 (let say one rotation), 
+it will be passed around by some particular unchanged players. Player 1 will only receive the ball after it is passed to these players. Which also means 
+we just need to keep track of how many passes it takes to bring the ball back to player 1 in one rotation and multiply it by (M - 1) to get the final result. 
+To achieve this, I used a while loop and two variables: one to track the player’s index and one to count the number of passes.  For each loop, 
+increment player’s index by L and number of passes by 1. If the player’s index goes out of scope then decrement it by N. 
+Break the loop if the player's index returns to 1.
+
+Reflection: There must be a better mathematical solution to find the number of passes it takes to bring the ball back to player 1 in one rotation. 
+This can be done by finding the gcm of N and L. Then dividing N by the above result. I found out about this after checking the similarity between multiple test cases. 
+This is a more optimized solution, however it may not be able to be achieved in a short amount of time. Next time, I should not try to brute force from the beginning 
+but rather look into similar patterns between test cases to find the optimal way. 
+
+
+*StreetParking Problem:
+
+Initial thoughts: I tried brute force immediately since all conditions can be checked based on the position of each object in the street. 
+Looping through each object in the street, if it is not ‘-’ then it means no parking space there. if the next object or next next object is Bus 
+then the current object is not parkable. If the former object (we only check from the second object since there is nothing infront of the first one) 
+or the next object is side-street then it is also not parkable. If all conditions pass we increment count by one.
+
+Reflection: At the moment I think this is the best solution (or I haven’t been able to figure any better solutions :)) 
+Again since we need to check the current object and the objects in front of or behind it, it is better to just loop through every single object and 
+check condition based on it. I am thinking of using Dynamic programming since each object we check at the moment, we also need to check the latter objects. 
+If the latter objects violate any conditions, we can also pass them. We don’t need to store any results but since we check them before loop through them, 
+I will still consider it as a Dynamic programming approach. I may try it in future problems.
+
+
+*AzimuthMonitoring problem:
+
+Initial thoughts: I thought of the Brute Force approach. I used a loop to check every single instruction in the instructions array and execute them one by one. 
+I got into some problems with the string array parameter at first since the function only allows one parameter. My solution was to use a vector as a parameter 
+so that I don’t have to keep track of the size.
+For “LEFT”, “RIGHT”, “TURN AROUND”, and “HALT” instructions, I wrote simple code to execute them. To differentiate “LEFT” and “LEFT X” (X is a number representing 
+angle), I differentiate them by using the find() string method, and I used std::stoi to convert X into a number for calculation. I applied the same thing for “RIGHT” 
+and “RIGHT X”. I represent all angles as positive for better angle imagination. And to normalize the angle so that it falls between 0 and 360, after each time the 
+robot’s angle is changed, I recalculate the angle using “% 360”. 
+
+Reflections: Beside this approach, I haven’t come up with any new ideas. I need to remember new string methods like std::stoi to use in exams if needed without 
+looking them up, and reflect on passing an array to function, as I struggled a bit doing it at the beginning of the session.
+
+
+*PartySeats problem:
+
+Initial thoughts: This problem seems hard. My approach again is Brute Force. I first checked the size of the input party, 
+if the size is divisible by 4 then continue. This is to alternate gender and make sure the two host seats directly across each other. 
+Then I created two vectors to store boys’ names and girl’s names and loop through the input party. Then I sorted both vectors lexicographically using sort(). 
+At the end I created another vector to store the plan, and push back the first half starting with the “HOST” before I push back the second half starting with “HOSTESS”. 
+Totally brute force!
+
+Reflections: This problem is not hard at all. It just took time for implementation. At the moment I think this is the best approach since 
+there are no better ideas for now:). One thing to remember is sort() so that I won’t have to look it up again. Moreover, 
+I am trying to find ways to reduce steps, especially with how I can implement the vector containing seating plan. 
+At the moment I need two for loops through the loops through boys and girls vectors. There may be a better way to do it
