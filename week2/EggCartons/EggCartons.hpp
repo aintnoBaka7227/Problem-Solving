@@ -13,7 +13,7 @@ class EggCartons {
              b = n / 4;
              count = b;
         } else {
-            for (int i = 0; i < n/4; i++) {
+            for (int i = 0; i < n/4 + 1; i++) {
                 if ((n - i * 4) % 3 == 0) {
                     a = (n - i * 4) / 3;
                     b = i;

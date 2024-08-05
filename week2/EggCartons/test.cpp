@@ -9,6 +9,8 @@ int main () {
     std::cout << test.minCartons(15) << std::endl;
     std::cout << test.minCartons(4) << std::endl;
     std::cout << test.minCartons(90) << std::endl;
+    std::cout << test.minCartons(6) << std::endl;
+    std::cout << test.minCartons(8) << std::endl;
 
     return 0;
 }
