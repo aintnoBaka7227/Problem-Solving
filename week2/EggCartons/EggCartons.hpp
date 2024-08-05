@@ -1,6 +1,10 @@
 #pragma once
 
 // greedy
+// check if % 2 -> not return -1 else n = n/2
+// since 4 > 3 - > if the number of 8 boxes increase - > less box needed - > keep updating count
+// check if % 4 -> if yes -> best result
+// if not -> loop to n/4 and find a. since b increase -> each time a is found -> update the count
 
 class EggCartons {
     public:
