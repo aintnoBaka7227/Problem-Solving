@@ -1,5 +1,7 @@
 #pragma once
 
+// greedy
+
 class EggCartons {
     public:
     int minCartons(int n) {
