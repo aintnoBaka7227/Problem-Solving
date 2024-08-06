@@ -7,13 +7,15 @@ class DerivativeSequence {
         if (n == 0) {
             return a;
         }
-        std::vector<int> newa;
         for (int order = 1; order <= n; order++) {
             int len = a.size();
             for (int i = 1; i < len; i++){
-                newa.push_back(a[i] - a[i-1]);
+                a.push_back(a[i] - a[i-1]);
+            }
+            for (int i = 0; i < len; i++) {
+                a.erase(a.begin());
             }
         }
-        return newa;
+        return a;
     }
 };
