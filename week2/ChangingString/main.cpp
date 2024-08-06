@@ -3,6 +3,6 @@
 
 int main() {
     ChangingString test;
-    std::cout << test.distance("aa", "aa", 2);
+    std::cout << test.distance("fbs", "wns", 3);
     return 0;
 }
