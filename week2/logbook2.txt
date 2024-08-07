@@ -1,0 +1,93 @@
+EggCartons problem:
+
+Initial thoughts: This seems to be solved using the Brute Force approach. I could not see any links between 6 and 8 for this problem,
+or in general if we change the problem with different cartons’ sizes. I could try to calculate the maximum possible numbers of 6-eggs 
+cartons and loop through each value. If the remaining number of eggs can be fitted in a number of 8-eggs cartons, I calculate the total 
+number of cartons needed and store them in an array. At last, I will find the smallest number and return it. If no number was found then return -1;
+
+Reflection: I noticed that Greedy algorithms and Mathematical approaches can be applied to reduce the number of steps needed without
+having to loop through everything; First I can check if the number of eggs is odd then return -1. Moreover, I turned the problem into 
+finding positive integer a, b so that 6*a + 8*b = total number of eggs. And dividing both sides by 2. This helps reduce the number of 
+loops needed as the sizes of cartons are now 3 and 4. Then I noticed that if we use more 4-eggs cartons, then we need less total number 
+of cartons to store them. So I had another condition to check if the number of total eggs can be divided by 4, if yes then calculate and 
+return the result as it will always be the smallest number of cartons needed. Then I implemented the rest just like my initial thoughts. 
+There is still one more step to optimize the solution but I didn't do it, which is rather looping from 0 to maximum number of 4-eggs cartons, 
+I could loop it in reverse, and if we find the number of cartons needed then return it immidiately. This aligns with my thinking from earlier 
+that the more 4-eggs cartons needed, the less total number of cartons we need. 
+
+
+Reppity problem:
+
+Initial thoughts: Brute Force approach flashed through my eyes. I also found out that the length of the substrings must always equal or less than 
+half the length of the input string. 
+I used nested for loops, the first one is to loop through all possible substrings’ lengths from the longest to 1 (since we are finding the longest 
+possible substrings), while the second one is to check whether I can find a substring that exists at least twice. The condition for the inner for 
+loop is that It goes from 0 to the last position in the input string where two similar strings can be found.  Then I used substr() to check all 
+possible substrings and use find() to check if there are any similar substrings. If yes then return the current value of the outer loop as this is 
+the longest possible size.
+
+Reflection: As far as I tried, there are no other solutions for this one. I already optimized my approach by looping from the longest possible 
+substrings to the shortest ones to reduce the number of loops if possible. One thing to learn is using std::string::npos to check if the end of 
+the string is reached for my find() method. I need to remember this so that I can use it in the exam.
+
+
+ChangingString problem: 
+
+Initial thoughts: I tried the Brute Force approach again. Since we need to change K chars in A while ensuring that the total distance is minimum, 
+I thought that we need to calculate the distance of each pair of characters, store them in a vector and sort them in order from smallest to largest. 
+Then based on the value of K, I will change the values of last K elements to “0” to make sure that the total distance will always be minimum. 
+
+Reflection: Before I reached my last solution, I missed cases like “aba”, “efa”, 3. Which means in the K elements that I need to change to zero, 
+there are elements that are 0 already. which means each of these pairs contains similar characters. The way to fix it is to check if there are 
+any 0 in the K elements that I need to change, if yes then change them to 1 to get the minimum possible distance.  Besides this approach, I haven’t 
+figured out any better way. 
+
+
+DerivativeSequence problem:
+
+Initial thoughts: The problem is rather straightforward and can be solved using Brute Force. If the input order is 0 then return the input array. 
+Then I used a nested for loop to solve this problem. The outer loop is to go down each order. For the first nested loop, I calculated each difference 
+of each pair of adjacent elements and pushed it back in a. In the second nested loop, I clear all previous elements. This allowed me to update a vector 
+after each order without having to create a new one. Keep looping until the last order is met.
+
+Reflections: this problem is rather easy but It can be optimized to reduce the number of for loops needed. Rather than having two for loops to add 
+and delete elements, I can just use one and put an if condition to only calculate differences at the second index. Moreover, I can see some pattern 
+between each order, and the base case n = 0 so Recursion might be another approach. However, I believe it won’t be any faster as I still have to go 
+through every element, which is the same as using a for loop.
+
+
+ElevatorLimit problem:
+
+Initial thought: This is a 3* problem so I expected it to be hard. I had no ideas at first so I tried finding the minimum and maximum number of people 
+in the elevator seperately. I would try Brute Force.
+
+    - Attempt 1:  I got the wrong mindset. I treated the elevator in each level as an individual case, which is wrong since we start the elevator 
+    from the first level to the last level. and I completely ignore the fact that exit first - enter later. Which means It is logical to find the 
+    minimum first before finding the maximum, and both changes based on the number of people getting in and getting out of the elevator at each level. 
+    However, I tried finding the maximum first by physicalLimit - sum(exit) + sum(enter). It worked for case 4 but failed case 5. I also could not work 
+    on the minimum with this kind of approach.
+
+    - Attempt 2: As I figured out my initial problems: I changed my approach. The initial number of people inside the elevator is unknown, and people 
+    get out first. By checking the number of people getting out at each level, I can calculate the minimum number of people inside the elevator at the 
+    start (“min”). We have a variable named “temp” to check the changes in the number of people in the elevator. Minus temp by number of people exit 
+    and update min if temp < min. Then add a number of people to temp to update the changes before moving to the next level. Using a for loop to redo 
+    the process for each level.
+
+    Attempt 3: Working on maximum. Same approach. In the first level, we calculate the change in the number of people getting in and out. I can find 
+    the maximum number of people in the elevator by subtracting the physicalLimit by the calculated change. Now I realized “temp” from the above attempt 
+    can be reused. I initialized a max variable that represents the gap between the physical level and the maximum number of people and set it to 0. 
+    At the end of the for loop above, “temp” is updated so I just need to update max if temp > max. This can be done in the same loop as attempt 2. 
+    To check if constraints are met, I just need to check if max - min > physicalLimit. 
+
+Reflection: I took too much time on this problem (2 days). I must reduce my time if I want to get good grades for the exam. Even Though I tried to make my 
+code cleaner, its readability is bad as someone who did not know my approach won’t be able to understand much. I will need to practice more problem if I 
+I want to finish my exam in times.
+
+
+Week 1 reflections:
+As Uni gets busier, I can not redo any problems so my reflections on its remained unchanged. I would spent more time on it at the weekend to prepare for my exams.
+
+
+
+
+
