@@ -4,7 +4,7 @@
 class ElevatorLimit {
     public:
     std::vector<int> getRange(std::vector<int> enter, std::vector<int> exit, int physicalLimit) {
-        std::vector<int> result = {};
+        std::vector<int> result;
         int min = 0;
         int max = 0;
         int temp = 0;

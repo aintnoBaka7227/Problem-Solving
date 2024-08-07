@@ -16,6 +16,6 @@ class DerivativeSequence {
                 a.erase(a.begin());
             }
         }
-        return a;
+        return a;   
     }
 };
