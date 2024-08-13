@@ -1,2 +1,13 @@
 # this is a log book for week 3
 
+For this week, I want to practice using recursive approach to solve problems. However, if I can not solve it using recursion, I may find other approaches.
+
+FracCount problem:
+
+Initial thought: this problem can be solved using recursion. I can create another private function that take 3 parameters: int numerator, int denominator
+and int count. count is used to count the position and initialized as 1. My base case will be 1/2 and return count immediately. If not I used a while loop
+to check if there are any irreducable fractions with the denominator value. This can be check by using gcd(). If yes, increment count by one. At the end I 
+return the recursive funcition with new count, decremented denominator and new numerator with value == the largest possible value based on the returned 
+denominator.
+
+Reflection:
