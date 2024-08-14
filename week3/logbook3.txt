@@ -10,4 +10,15 @@ to check if there are any irreducable fractions with the denominator value. This
 return the recursive funcition with new count, decremented denominator and new numerator with value == the largest possible value based on the returned 
 denominator.
 
+Reflection: It worked, and since I count not find any better approach, I will stick with my solution here. I wonder if there is better way to use recursion
+without having to implement any code inside my private function.
+
+
+StrangeComputer problem:
+Initial thought: This can be done using both brute force and recursion. But I will try recursion. One thing I notice is that the minimum number of operations
+needed is equal to number of times the char in mem change between 0 and 1. I can create another private function takes 3 parameters: string mem, char c and 
+int count. count is used to track number of changes, c to track the most recent char while mem will be updated each time the recursive function is recalled, 
+removed the first character.
+
 Reflection:
+
