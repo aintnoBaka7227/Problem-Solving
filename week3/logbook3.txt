@@ -15,6 +15,7 @@ without having to implement any code inside my private function.
 
 
 StrangeComputer problem:
+
 Initial thought: This can be done using both brute force and recursion. But I will try recursion. One thing I notice is that the minimum number of operations
 needed is equal to number of times the char in mem change between 0 and 1. I can create another private function takes 3 parameters: string mem, char c and 
 int count. count is used to track number of changes, c to track the most recent char while mem will be updated each time the recursive function is recalled, 
@@ -22,4 +23,12 @@ removed the first character.
 
 Reflection: Well it worked. I optimized it before submission so I don't think I need to improve anything for this one:). Tried my best to reduce any steps 
 that look unnecessary. 
+
+SimpleCompressor problem:
+
+Initial thought: Again this is a recursion problem. My idea for now is to using find() to navigate the [] for each recursion calls and uncompress it. Base
+case is no square brackets found. Rather than open it from outside in, It is better to open it inside out, starting from most inner loop so that there is 
+only one [] to handle. Multiple [] makes me feel hard to handle them.
+
+Reflection: I did not know how to use rfind() till now. Still forgot how to use substr and find, which is not good at all. 
 
