@@ -19,6 +19,6 @@ class SimpleCompressor {
         // }
         // data = open_str + uncompressed_str + close_str;
         // return uncompress(data);
-        return ""
+        return "";
     }
 };
