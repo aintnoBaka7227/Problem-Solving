@@ -7,7 +7,14 @@ class SimpleCompressor {
         if (data.find('[') == std::string::npos) {
             return data;
         }
-        int open_brac = data.rfind('[');
+        // int open_brac = data.rfind('[');
+        int open_brac;
+        for (int i = data.length() - 1; i >= 0; --i) {
+            if (data[i] == '[') {
+                open_brac = i;
+                break;
+            }
+        }
         std::string open_str = data.substr(0, open_brac);
         int close_brac = data.find(']');
         std::string close_str = data.substr(close_brac + 1);
@@ -19,6 +26,5 @@ class SimpleCompressor {
         }
         data = open_str + uncompressed_str + close_str;
         return uncompress(data);
-        return "";
     }
 };
