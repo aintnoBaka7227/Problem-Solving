@@ -30,5 +30,11 @@ Initial thought: Again this is a recursion problem. My idea for now is to using 
 case is no square brackets found. Rather than open it from outside in, It is better to open it inside out, starting from most inner loop so that there is 
 only one [] to handle. Multiple [] makes me feel hard to handle them.
 
-Reflection: I did not know how to use rfind() till now. Still forgot how to use substr and find, which is not good at all. 
+Reflection: I did not know how to use rfind() till now. Still forgot how to use substr and find, which is not good at all. Got into some problems with Gradescope 
+submission...
 
+QuickSums problem:
+
+initial thought: nothing, just for testing.
+
+reflection: ...
