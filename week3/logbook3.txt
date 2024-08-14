@@ -21,7 +21,7 @@ needed is equal to number of times the char in mem change between 0 and 1. I can
 int count. count is used to track number of changes, c to track the most recent char while mem will be updated each time the recursive function is recalled, 
 removed the first character.
 
-Reflection: Well it worked. I optimized it before submission so I don't think I need to improve anything for this one:). Tried my best to reduce any steps 
+Reflection: Well it worked. I optimized it before submission so I don't think I need to improve anything for this one. Tried my best to reduce any steps 
 that look unnecessary. 
 
 SimpleCompressor problem:
@@ -31,7 +31,7 @@ case is no square brackets found. Rather than open it from outside in, It is bet
 only one [] to handle. Multiple [] makes me feel hard to handle them.
 
 Reflection: I did not know how to use rfind() till now. Still forgot how to use substr and find, which is not good at all. Got into some problems with Gradescope 
-submission...
+submission... Can't resolve it so I may try another problem for now. Very Frustrating.
 
 QuickSums problem:
 
