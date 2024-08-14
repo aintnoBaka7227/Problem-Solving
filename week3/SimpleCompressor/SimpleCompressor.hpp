@@ -53,7 +53,7 @@ class SimpleCompressor {
       }
     }
     for (int i = 0; i < compressions.size(); i++) {
-      std::cout << compressions[i] << std::endl;
+      //std::cout << compressions[i] << std::endl;
       uncompressed += recursiveUncompress(compressions[i]);
     }
     return uncompressed;
