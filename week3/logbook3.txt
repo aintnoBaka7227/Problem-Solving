@@ -20,5 +20,6 @@ needed is equal to number of times the char in mem change between 0 and 1. I can
 int count. count is used to track number of changes, c to track the most recent char while mem will be updated each time the recursive function is recalled, 
 removed the first character.
 
-Reflection:
+Reflection: Well it worked. I optimized it before submission so I don't think I need to improve anything for this one:). Tried my best to reduce any steps 
+that look unnecessary. 
 
