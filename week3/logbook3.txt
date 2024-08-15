@@ -32,6 +32,12 @@ only one [] to handle. Multiple [] makes me feel hard to handle them.
 
 Reflection: I did not know how to use rfind() till now. Still forgot how to use substr and find, which is not good at all. Got into some problems with Gradescope 
 submission... Can't resolve it so I may try another problem for now. Very Frustrating.
+I realized that my code might not passed due to test case where there is >= 2 compressions. If this is the case then my approach was totally wrong. I will try to 
+change my approach. I am thinking of splitting the data string into substrings of independent chars and compressions. This way I can still create a private function
+that handle each compression seperately. This is also helping me save times as I don't have to rewrite my logic. 
+
+P/s: I still failed to get score on gradescope. Might switch to another one for now.
+
 
 QuickSums problem:
 
