@@ -1,4 +1,5 @@
 # this is a log book for week 3
+# Quote of the day: If the code is not broken, don't touch it lol.
 
 For this week, I want to practice using recursive approach to solve problems. However, if I can not solve it using recursion, I may find other approaches.
 
@@ -36,7 +37,18 @@ I realized that my code might not passed due to test case where there is >= 2 co
 change my approach. I am thinking of splitting the data string into substrings of independent chars and compressions. This way I can still create a private function
 that handle each compression seperately. This is also helping me save times as I don't have to rewrite my logic. 
 
-P/s: I still failed to get score on gradescope. Might switch to another one for now.
+P/s: I still failed to get score on gradescope. Might switch to another one for now. I reliezed that my approach is wrong as it can only solved 1 compressions each,
+not multiple compressions inside one compression like [2[3A][4B]]. It results in infinite loops, cause the program to break and Gradescope won't accept it.
+
+
+FewestFactor problem:
+Initial thought: Im thinking of using backtracking and recursion to generate all possible permutations of the array. For example [1,2,3], I can have 123 and backtrack
+to 132, then backtrack to 1 and get 213, and do the same thing to get 231. This way I can cover all possible permutations. Then I can keep track of the num of factors
+and the permutation itself, and compare it to the next permutation to get the final result.
+
+Reflection: ... Well for now it works. One thing to consider is that there might be permutations that are similar to each other. My recursive for now will generate all
+without conisder repititions. One way to resolve this is using Dynamic Programming. However, if I tried to merge it into my code using std::map, for every single 
+Permutation it need to loop thorugh the map. Maybe unordered_map will be better? I will try it if I still have enough time. For now, leave it be.
 
 
 QuickSums problem:
