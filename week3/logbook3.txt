@@ -44,15 +44,31 @@ not multiple compressions inside one compression like [2[3A][4B]]. It results in
 FewestFactor problem:
 Initial thought: Im thinking of using backtracking and recursion to generate all possible permutations of the array. For example [1,2,3], I can have 123 and backtrack
 to 132, then backtrack to 1 and get 213, and do the same thing to get 231. This way I can cover all possible permutations. Then I can keep track of the num of factors
-and the permutation itself, and compare it to the next permutation to get the final result.
+and the permutation itself, and compare it to the next permutation to get the final result. This can be done by having a private function that takes 3 parameters: 
+digits array, index: track the current index of the digit for backtracking, and len: index of the last elements. 
 
 Reflection: ... Well for now it works. One thing to consider is that there might be permutations that are similar to each other. My recursive for now will generate all
 without conisder repititions. One way to resolve this is using Dynamic Programming. However, if I tried to merge it into my code using std::map, for every single 
-Permutation it need to loop thorugh the map. Maybe unordered_map will be better? I will try it if I still have enough time. For now, leave it be.
+Permutation it need to loop thorugh the map. Maybe unordered_map will be better? I will try it if I still have enough time. For now, leave it be. To sum up, the idea is
+to generate all possible nums through backtracking and recursive call, then find the one with least factors (mathematics). 
 
 
 QuickSums problem:
 
-initial thought: nothing, just for testing.
+Initial thought: I can see similar pattern between FewestFactor problem and this one. I can use recursive backtracking to get all potential additions. For example, 
+[1, 2, 3], we can have 1 + 2 + 3, backtrack to 1 + 23, backtrack to  12 + 3, backtrack to 123. This can be done through a private function that take the default parameters with
+extra parameters as following: index: track the position of digit for backtracking, count: number of subnums generated, current: count the sum of subnums. 
+base case is when index == size of the array, which means the recursive call reach the end of the array. If the calculated sum equal to the target sum then return
+count - 1 as number of + is less than 1. Else return -1. Also for each backtrack call, it will return a result. comparing this result with the base result and get the
+minimum.
 
-reflection: ...
+reflection: Seems like it worked. For this problem it tooked me less time to do compare to FewestFactor. While the approach is still backtracking, for this one the index
+is slightly different since for this one we calculated continous sums, not generating numbers, so the index will move based on the change of i in for loop. Moreover,
+I am not sure but maybe dynamic programming can be applied to reduce computational cost, since there might be cases that are repititive. 
+
+
+Weekly digest:
+This has been a horrible week for me, as I did extremly bad in the exam. I tried B1 but I misinterpreted the question, lead to wrong approach and wrong ideas. got 47.5 
+which was crazy for me. This is why i dicided to practice recursion, both brute force and backtracking. Even though this was week 3 ques, many can be solved by 
+backtracking. I did look up example code of backtracking online to understand how to implement it, since ideas about backtracking is easy to be found, but hard to implement.
+
