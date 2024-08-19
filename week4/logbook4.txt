@@ -19,6 +19,19 @@ Initial thoughts: I am thinking of finding the cell the largest profit value the
 this greedy approach. Calculate the actual profit and return it. 
 P/s: There is a hole in my solution. Finding the maximum and following minimum does not guarantee that the substraction will be the smallest or
 a valid answer (>0). I changed my solution to calculating all possible substractions for each cellar in profit and each cellar in decay and keep track
-the largest possible profit. 
+the largest possible profit. This is brute force.
 
-Reflection:  
+Reflection: Well it worked. However, it is quite a time consuming and costly approach since I have to calculate everything. If I had more time, I would 
+come back and try recusion back tracking. One way to optimize my approach is  to still looping through every cell in profit, and find the minimum decay 
+value (not the same index) for subtraction to minimize the computational cost. 
+
+UnsealTheSafe problem:
+Initial thoughts: This is definitely a recursive back tracking problem. For each input N, we will construct all posible safe's passwords base on the rules
+which will have N layers. For each layer, we have an array of possible choices, which means after we count all possible choices in the last layer, we back
+track to one level above and start checking all possible values again. This cycle continues till all layer at the top are choosen. My approach is to 
+create a variable "result" to track number of passwords and a private function that take N, an array of next possible buttons, and an index to count the 
+password length. Each time index == N, increment result by one. One funny thing is that since 25 is too big, my laptop took too long to run and it seized
+at the end so I can't really check the result for 25. My laptop can only run the code with N <= 20.
+
+Reflections:
+
