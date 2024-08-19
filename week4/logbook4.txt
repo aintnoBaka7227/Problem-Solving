@@ -17,5 +17,8 @@ TimeTravellingCellar problem:
 
 Initial thoughts: I am thinking of finding the cell the largest profit value then find the cell with the smallest decay (not the same index). May call
 this greedy approach. Calculate the actual profit and return it. 
+P/s: There is a hole in my solution. Finding the maximum and following minimum does not guarantee that the substraction will be the smallest or
+a valid answer (>0). I changed my solution to calculating all possible substractions for each cellar in profit and each cellar in decay and keep track
+the largest possible profit. 
 
-Reflection: 
+Reflection:  
