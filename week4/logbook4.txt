@@ -1,4 +1,5 @@
 # this is a log book for week 4
+# target for this week is recursion(brute force || back-tracking). However, if there are better design approaches then I will use them.
 
 ImportantTasks problem:
 
@@ -8,4 +9,13 @@ on to the next complexity, if not then I move the index by one in computers arra
 If found then increment the count by one. This process will stop at the moment when one complexity is over the complexity that all available
 computers can handle.
 
-Reflections: first bug: out of bound access after my while loop. just need to add one condition;
+Reflections: first bug: out of bound access after my while loop. fixed by adding condition to check if loop to the end of computers array. This 
+problem is quite straight foward and using greedy will be the best approach. Since both array is sorted, if there is one complexity that can not
+solved by any comps, we will stop checking immediately since the following complexities will also not be solved anyways.
+
+TimeTravellingCellar problem:
+
+Initial thoughts: I am thinking of finding the cell the largest profit value then find the cell with the smallest decay (not the same index). May call
+this greedy approach. Calculate the actual profit and return it. 
+
+Reflection: 
