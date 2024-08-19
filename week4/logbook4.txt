@@ -1,0 +1,11 @@
+# this is a log book for week 4
+
+ImportantTasks problem:
+
+Initial thoughts: This can be solved using brute force and greedy. I can sort both arrays in ascending orders and loop through the complexity array.
+For each index in complexity array, I check with the corresponding position in computers array, if the computers can handle it then I moved
+on to the next complexity, if not then I move the index by one in computers array to check if there is a computer that can handle the task.
+If found then increment the count by one. This process will stop at the moment when one complexity is over the complexity that all available
+computers can handle.
+
+Reflections:
