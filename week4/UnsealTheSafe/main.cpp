@@ -2,6 +2,6 @@
 
 int main() {
     UnsealTheSafe test;
-    std::cout << test.countPasswords(20) << std::endl;
+    std::cout << test.countPasswords(25) << std::endl;
     return 0;
 }

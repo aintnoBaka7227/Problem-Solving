@@ -26,6 +26,7 @@ come back and try recusion back tracking. One way to optimize my approach is  to
 value (not the same index) for subtraction to minimize the computational cost. 
 
 UnsealTheSafe problem:
+
 Initial thoughts: This is definitely a recursive back tracking problem. For each input N, we will construct all posible safe's passwords base on the rules
 which will have N layers. For each layer, we have an array of possible choices, which means after we count all possible choices in the last layer, we back
 track to one level above and start checking all possible values again. This cycle continues till all layer at the top are choosen. My approach is to 
@@ -33,7 +34,19 @@ create a variable "result" to track number of passwords and a private function t
 password length. Each time index == N, increment result by one. One funny thing is that since 25 is too big, my laptop took too long to run and it seized
 at the end so I can't really check the result for 25. My laptop can only run the code with N <= 20.
 
-P/s: since autograder can't run it. I will try long long.
+P/s 1: since autograder can't run it. I will try long long. It doesn't work. It seems that my computational time is over the limit and gradescope seized.
+I believed my approach is correct but it seems like it is taking too long to compute. I thought It would only be the case for my laptopn but seems like
+It costed too much resources that seized the machine. I will try using dynamic programming to store value and see if it work or not. 
+P/s 2: There are two base case length 0 and length 1 password. While length 0 does not really make sense, all possible value should be set to 0.
+For length 1, there is 10 digits to choose so there are 10 choices. For N = 2, I realize that if it ends with 1 then the only way to reach it is from 2
+and 4. so the number of length 2 password end with 1 is equal to number of length 1 password end with 2 + number of length 1 password end with 4, which
+result in 2. The same logic goes on with N = 3, N = 4. Which result in the following equation: number of length N password end with digit a = sum of 
+numbers of length N-1 passwords end with digits that will reach to a. To track all calculated number of passwords with length from 0 to N, I can create a table
+that has N+1 rows and 10 columns from 0 to 9 which represents the last digit.  
 
-Reflections:
+Reflections: Since Ms Izu mentioned that UnsealTheSafe can be solved using Dynamic Programming, I tried it. I did some researches online on examples of 
+Dynamic programming implementation, before trying on this problem again. I still believed that we can solve this problem using backtracking, but maybe
+it needed to be implement with dynamic programming to decrease computational costs. I will try this approach again if there is still enough time.
+
+
 
