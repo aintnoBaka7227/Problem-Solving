@@ -8,4 +8,4 @@ on to the next complexity, if not then I move the index by one in computers arra
 If found then increment the count by one. This process will stop at the moment when one complexity is over the complexity that all available
 computers can handle.
 
-Reflections:
+Reflections: first bug: out of bound access after my while loop. just need to add one condition;

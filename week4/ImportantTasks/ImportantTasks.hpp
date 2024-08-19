@@ -20,7 +20,7 @@ class ImportantTasks {
                 while(complexity[i] > computers[j] && j < computers.size()) {
                     j++;
                 }
-                if (complexity[i] <= computers[j]) {
+                if (complexity[i] <= computers[j] && j < computers.size()) {
                     count++;
                     j++;
                 }
