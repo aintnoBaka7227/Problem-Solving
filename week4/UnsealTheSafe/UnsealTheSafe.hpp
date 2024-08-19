@@ -4,7 +4,7 @@
 
 class UnsealTheSafe {
 private:
-    long result;
+    long long result;
     
     void backtrack(int N, const std::vector<int>& buttons, int index) {
         if (index == N) {
@@ -51,7 +51,7 @@ private:
     }
 
 public:
-    long countPasswords(int N) {
+    long long countPasswords(int N) {
         result = 0;
         backtrack(N, {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}, 0);
         return result;
