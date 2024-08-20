@@ -26,7 +26,9 @@ values. The table can be a vector.
 
 TroubleShootings:
 
-Reflections:
+Reflections: well it worked. However, one bad thing about my approach is that every single time i loop through the input array, I also have to reloop on 
+my table to check if it is duplicated. Moreover, I need another method to reverse my vector table at the end, which is costly. I believe there must be 
+a better approach that I haven't discover. I will redo it later with better approach if there is still time.
 
 
 
