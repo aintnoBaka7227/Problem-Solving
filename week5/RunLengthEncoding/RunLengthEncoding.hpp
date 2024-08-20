@@ -8,19 +8,19 @@ class RunLengthEncoding {
         std::string decoded_text;
         for (int i = 0; i < text.length(); i++) {
             //std::cout << "i: " << i << std::endl;
-            std::string count;
+            int count = 0;
             std::string decode;
             while (text[i] - '0' >= 0 && text[i] - '0' <= 9) {
-                count+=text[i];
+                count = count * 10 + (text[i] - '0');
                 i++;
                 //std::cout << "new i: " << i << std::endl;
             }
             //std::cout << "new count: " << count << std::endl;
-            if (count != "") {
-                if (std::stoi(count) > 50) {
+            if (count != 0) {
+                if (count > 50) {
                     return "TOO LONG";
                 }
-                for (int j = 0; j < std::stoi(count); j++) {
+                for (int j = 0; j < count; j++) {
                     decode += text[i]; 
                 }
                 decoded_text +=decode;
