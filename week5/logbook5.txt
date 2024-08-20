@@ -6,7 +6,12 @@ RunLengthDecoding problem:
 
 Initial thoughts: Brute Force to core. My idea is to loop through the entire string, each time a number is encountered, I recorded the value and 
 decode the correspond character based on that number. 1 while loop is used to handle the number and increment index. 
+P/s: Got into problem with my implementation because of 
+two reasons: 1. fix directly on text string -> unexpected behavior when for loop use text.length() as condition; 2. number can be up to two digits
+but my implementation only check 1. How did I fix it: create another string called decoded_text. This string will add each letter if there is nothing
+to decode, else it will add the decoded parts. Let see if it worked
 
-Reflection: This is a fast and easy approach. some might use recursion but I prefer this way. 
+Reflection: This is a fast and easy approach. some might use recursion but I prefer this way. I need to be more careful when implement it as there are 
+cases that I might potentially miss or fixing on provided parameters. 
 
 
