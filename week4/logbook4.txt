@@ -59,6 +59,8 @@ at that current position, and bribe to record how much money has he paid so far.
 check if current strength is able to handle the new monster. If he can defend again it then will lead to two return cases: bribing it and not bribing it. since index 
 will go to the end, I can return the min return value between this two return call to get the minimum possible bribe to handle each encountered monster.
 
+P/s: failed in the first try and get 62. I tried logging all possible parameters and realize strength was to big to use type int. Gonna try using long instead.
+
 Reflectionn: I think this is the only possible solution to this problem. 
 
 

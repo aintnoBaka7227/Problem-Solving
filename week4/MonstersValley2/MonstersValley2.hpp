@@ -4,7 +4,8 @@
 
 class MonstersValley2 {
     private:
-    int backtracking(std::vector<int> dread, std::vector<int> price, int bribe, int strength, int index) {
+    int backtracking(std::vector<int> dread, std::vector<int> price, int bribe, long strength, int index) {
+        // std::cout << "strength: " << std::endl;
         if (index == dread.size()) {
             return bribe;
         }
