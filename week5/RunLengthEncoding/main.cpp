@@ -2,6 +2,6 @@
 
 int main() {
     RunLengthEncoding test;
-    std::cout << test.decode("50A1B") << std::endl;
+    std::cout << test.decode("4A3BC2DE") << std::endl;
     return 0;
 }

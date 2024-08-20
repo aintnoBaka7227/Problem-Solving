@@ -16,10 +16,10 @@ class RunLengthEncoding {
                 //std::cout << "new i: " << i << std::endl;
             }
             //std::cout << "new count: " << count << std::endl;
-            if (std::stoi(count) > 50) {
-                return "TOO LONG";
-            }
             if (count != "") {
+                if (std::stoi(count) > 50) {
+                    return "TOO LONG";
+                }
                 for (int j = 0; j < std::stoi(count); j++) {
                     decode += text[i]; 
                 }
