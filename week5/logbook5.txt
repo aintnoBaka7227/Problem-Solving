@@ -15,6 +15,18 @@ using stoi for count when the num is too large -> change it to adding each digit
 num even bigger: fixed by each time count is changed, see if count > 50 return immediately.
 
 Reflection: This is a fast and easy approach. some might use recursion but I prefer this way. I need to be more careful when implement it as there are 
-cases that I might potentially miss or fixing on provided parameters. 
+cases that I might potentially miss or fixing on provided parameters. Finally it is fixed, i missjudged the question as there were so many edge cases
+could break my code.
+
+SimpleDuplicateRemover:
+
+Inital thoughts: seem like this is a dynamic programming question. For each encounter, if the num is new then add it to a table, if not then don't add
+it. and when i loop through the array, I loop it backward so that the table will have a reverse order of the output table that only contains right-most
+values. The table can be a vector.
+
+TroubleShootings:
+
+Reflections:
+
 
 
