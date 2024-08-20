@@ -61,7 +61,15 @@ will go to the end, I can return the min return value between this two return ca
 
 P/s: failed in the first try and get 62. I tried logging all possible parameters and realize strength was to big to use type int. Gonna try using long instead.
 
-Reflectionn: I think this is the only possible solution to this problem. 
+Reflection: Well it is fixed. I am happy. I think this is the only possible solution to this problem since there is no way for the protagonist to know if he is 
+going to encounter a super scary monster or not. My code is fully optimized to nothing to improve for now. Maybe I will try Brute Force approach if there is enough
+time to check performance. 
+
+
+Weekly dialog: My initial goal for this week is to practice backtracking, but for the two 2 star problems, I did them without backtracking, which was not really
+satisfied. But time is running out and I tried it. For Unseal the safe, I will tried mixing backtracking and dynamic programming to solve it. For now, I will only
+use brute force and dynamic programming to solve it. MonstersValley is not that hard if you can catch the ideas behind it, which is tried every possible cases (I
+believed so lol). At the end, I think I have tried enough backtracking, time to move on to dynamic programming.
 
 
 
