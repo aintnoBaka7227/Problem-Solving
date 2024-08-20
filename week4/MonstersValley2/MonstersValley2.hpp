@@ -9,8 +9,13 @@ class MonstersValley2 {
             return bribe;
         }
         if (strength < dread[index]) {
+            // std::cout << "index: " << index << std::endl;
+            // std::cout << "inevitable bribe: " << backtracking(dread, price, bribe + price[index], strength + dread[index], index + 1) << std::endl;
             return backtracking(dread, price, bribe + price[index], strength + dread[index], index + 1);
         }
+        // std::cout << "index: " << index << std::endl;
+        // std::cout << "evitable bribe: " backtracking(dread, price, bribe + price[index], strength + dread[index], index + 1) << std::endl;
+        // std::cout << "not bribe: " << backtracking(dread, price, bribe, strength, index + 1) << std::endl;
         return std::min(backtracking(dread, price, bribe + price[index], strength + dread[index], index + 1), backtracking(dread, price, bribe, strength, index + 1));
 
     }
