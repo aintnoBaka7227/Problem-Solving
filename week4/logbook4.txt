@@ -50,7 +50,16 @@ it needed to be implement with dynamic programming to decrease computational cos
 
 MonstersValley2 problem:
 
-Initial thought: This is a back tracking problem. 
+Initial thought: This is a back tracking problem. I got a fun idea is that since the Manao can't really know if whenever he meets a monster, he should bribe it
+or not so that he can defence again more scary monsters without paying a lot of money. So for each encounter, I will record both cases of paying or not paying the
+monster and do this sequencially. This way all possible cases are recorded and I can pick the case where he pay the least amount of money. However, there are cases 
+where even if he already bribed all previous monsters, it is still not possible to defend again the new one, then he will always have to pay. My private function
+for backtracking will contains both dread and price arrays, and 3 new parameters: index: to track the current position, strength: to keep track his defence point 
+at that current position, and bribe to record how much money has he paid so far. The base case will be when index is at the end of the array. One if condition to 
+check if current strength is able to handle the new monster. If he can defend again it then will lead to two return cases: bribing it and not bribing it. since index 
+will go to the end, I can return the min return value between this two return call to get the minimum possible bribe to handle each encountered monster.
+
+Reflectionn: I think this is the only possible solution to this problem. 
 
 
 
