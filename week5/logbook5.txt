@@ -1,0 +1,12 @@
+# this is a log book for week 5
+
+# this week is for dynamic programming. At least I need to solve 2 probs involves dynamic approach.
+
+RunLengthDecoding problem:
+
+Initial thoughts: Brute Force to core. My idea is to loop through the entire string, each time a number is encountered, I recorded the value and 
+decode the correspond character based on that number. 1 while loop is used to handle the number and increment index. 
+
+Reflection: This is a fast and easy approach. some might use recursion but I prefer this way. 
+
+
