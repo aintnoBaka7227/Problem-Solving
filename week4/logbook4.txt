@@ -44,7 +44,13 @@ result in 2. The same logic goes on with N = 3, N = 4. Which result in the follo
 numbers of length N-1 passwords end with digits that will reach to a. To track all calculated number of passwords with length from 0 to N, I can create a table
 that has N+1 rows and 10 columns from 0 to 9 which represents the last digit.  
 
-Reflections: 
+Reflections: Since Ms Izu mentioned that UnsealTheSafe can be solved using Dynamic Programming, I tried it. I did some researches online on examples of 
+Dynamic programming implementation, before trying on this problem again. I still believed that we can solve this problem using backtracking, but maybe
+it needed to be implement with dynamic programming to decrease computational costs. I will try this approach again if there is still enough time.
+
+MonstersValley2 problem:
+
+Initial thought: This is a back tracking problem. 
 
 
 
