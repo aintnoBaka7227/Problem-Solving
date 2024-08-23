@@ -43,10 +43,5 @@ pseudo code: row[i+1] = price(color1) + std::min(price(color2), price(color3))
 
 TroubleShootings: 
 
-Reflections: Seems like my approach works. I believe this is the optimal way (even though this problem is sifnified as an dynamic programming problem) Since
-we reduce all duplicated calculations using a value table. If this problem is solved using backtracking, I might got into resource overflow like UnsealTheSafe,
-where number of computations is enormous. One thing to remember from this is for dynamic programming problem, the requirements tend to be finding the maximum
-or minimum values where all provided values are randomized, which require us to calculate all possible computions but these computations are duplicated. 
-Another thing is using string stream to parse a string with delimeters. This is crucial to remember for future exams.
-
+Reflections: 
 
