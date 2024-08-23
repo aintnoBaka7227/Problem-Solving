@@ -31,4 +31,22 @@ my table to check if it is duplicated. Moreover, I need another method to revers
 a better approach that I haven't discover. I will redo it later with better approach if there is still time.
 
 
+RGBStreet problem:
+Initial thoughts: This problem can be solved using either backtracking or dynamic programming. Since we may need to calculate all possible cases when
+we pick R, G, B for the first house, then we will need to pick between the other two colours with lowest price for the next house, and keep doing that 
+till the last house. We can create a table with 3 rows, each rows will start will a different colour. There will be houses.size() + 1 column, with each 
+column represent the total cost after n houses been painted. Since the way we calculate the price for the following houses duplicate, we can reuse those 
+values for next calculation. for example if red is pick then the next house will be either green or blue with the lowest price, if the next house is blue 
+then the following one will be either red or green, if we pick green then it will come back to red or blue and so on. By utilizing this fact, we can reuse 
+the calculated value store in the table to reduce computational cost. 
+pseudo code: row[i+1] = price(color1) + std::min(price(color2), price(color3))
+
+TroubleShootings: 
+
+Reflections: Seems like my approach works. I believe this is the optimal way (even though this problem is sifnified as an dynamic programming problem) Since
+we reduce all duplicated calculations using a value table. If this problem is solved using backtracking, I might got into resource overflow like UnsealTheSafe,
+where number of computations is enormous. One thing to remember from this is for dynamic programming problem, the requirements tend to be finding the maximum
+or minimum values where all provided values are randomized, which require us to calculate all possible computions but these computations are duplicated. 
+Another thing is using string stream to parse a string with delimeters. This is crucial to remember for future exams.
+
 
