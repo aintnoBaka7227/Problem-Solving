@@ -24,7 +24,7 @@ Inital thoughts: seem like this is a dynamic programming question. For each enco
 it. and when i loop through the array, I loop it backward so that the table will have a reverse order of the output table that only contains right-most
 values. The table can be a vector.
 
-TroubleShootings:
+TroubleShootings: There is no major problems.
 
 Reflections: well it worked. However, one bad thing about my approach is that every single time i loop through the input array, I also have to reloop on 
 my table to check if it is duplicated. Moreover, I need another method to reverse my vector table at the end, which is costly. I believe there must be 
@@ -41,7 +41,7 @@ then the following one will be either red or green, if we pick green then it wil
 the calculated value store in the table to reduce computational cost. 
 pseudo code: row[i+1] = price(color1) + std::min(price(color2), price(color3))
 
-TroubleShootings: 
+TroubleShootings: There is no major problems.
 
 Reflections: Seems like my approach works. I believe this is the optimal way (even though this problem is sifnified as an dynamic programming problem) Since
 we reduce all duplicated calculations using a value table. If this problem is solved using backtracking, I might got into resource overflow like UnsealTheSafe,
@@ -61,8 +61,17 @@ many for loops to check, which is inefficient so in the inner for loop, I will c
 loop to reduce number of loops needed, and also by tracking on how many chars have been assigned, the number of for loop needed will also be reduced. For the base
 case, I will calculate number of possible slots and return -1 if size of frequencies is bigger then number of slots.
 
-TroubleShootings:
+TroubleShootings: There is no major problems.
 
-Reflections:
+Reflections: This problems look hard at first but it not really hard. The for loop logic was tricky cause normally, I will always loop through each value of keys
+in keySizes array, and the inner loop will be the keystrokes. However, if doing that means I can only assign each char in one key at one time, which logically wrong
+since what I want is to assigned all most-frequenct chars at the same time at any available keys. I am not sure if there are better solutions to this problem.
+One thing about greedy is that I need to check all possible cases. If not then the logic might not be correct or bypass unseen cases, lead to failing points. 
+
+Weekly dialog: My initial ideas for this week is to practice dynamic programmming. However, the only dynamic question so far is the bonus one, which has not been 
+what i want. While the first and last questions I solved are either brute force or greedy question, which is not helpful. SimpleDuplicateRemover can be solved using
+dynamic approach, and my solution did use it to a small extent, but I believed there are optimal ways of using dynamic programming for this question rather than my
+way, cause it seems more brute force to me. I will try to do more dynamic programming questions and revise recursion (backtracking - brute force) next week to prepare
+for the following exams.
 
 
