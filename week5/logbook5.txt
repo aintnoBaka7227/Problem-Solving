@@ -50,3 +50,19 @@ or minimum values where all provided values are randomized, which require us to 
 Another thing is using string stream to parse a string with delimeters. This is crucial to remember for future exams.
 
 
+TomekPhone problem:
+Initial thoughts: For now I don't really have any ideas. One thing I noticed is that we need to put letters with most frequencies first so that they only need
+the minimal number of keystrokes while the less frequence ones should be put behind. This seems to be a greedy algorithm. I will sort the frequencies array in
+ascending order. Then I can run a nested for loop, the outer is for tracking number of keystrokes needed for the character at n'th position while the inner for
+loop is to loop throught the number of letters each key can contains. This way, we can assign all the most frequence chars for all keys in the first layer at
+the same time, and then do it again for the following layers. However, doing it this way means that we don't really know the size of each key, so we need a limit
+for number of loops in the outer for loop. Since each elements of keySizes is between 1 and 50, I will cap the for loop at 50. But this means there will be too
+many for loops to check, which is inefficient so in the inner for loop, I will check if the size of each button being loop with the current index of the outer 
+loop to reduce number of loops needed, and also by tracking on how many chars have been assigned, the number of for loop needed will also be reduced. For the base
+case, I will calculate number of possible slots and return -1 if size of frequencies is bigger then number of slots.
+
+TroubleShootings:
+
+Reflections:
+
+
