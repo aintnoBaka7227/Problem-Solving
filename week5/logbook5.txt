@@ -39,9 +39,12 @@ column represent the total cost after n houses been painted. Since the way we ca
 values for next calculation. for example if red is pick then the next house will be either green or blue with the lowest price, if the next house is blue 
 then the following one will be either red or green, if we pick green then it will come back to red or blue and so on. By utilizing this fact, we can reuse 
 the calculated value store in the table to reduce computational cost. 
-pseudo code: row[i+1] = price(color1) + std::min(price(color2), price(color3))
 
-TroubleShootings: There is no major problems.
+TroubleShootings: My logic at first was not efficient. What I thought initially was going from the first house, and keep picking the other color with minimum 
+price for the next house and so on. However, doing that make assigning value to the table hard and in the moment I don't really know how to do it. Rather, doing
+it backward means I will choose color for the last house, and calculated the minimal price taken based on the minimal price needed to paint the previous house. 
+This way it is easier to assign values into the table and the calculation steps are reusable.  
+pseudo code: row[i+1] = price(color1)(new house) + std::min(price(color2)(old house), price(color3)(old house))
 
 Reflections: Seems like my approach works. I believe this is the optimal way (even though this problem is sifnified as an dynamic programming problem) Since
 we reduce all duplicated calculations using a value table. If this problem is solved using backtracking, I might got into resource overflow like UnsealTheSafe,
