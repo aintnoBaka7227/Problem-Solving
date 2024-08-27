@@ -11,9 +11,9 @@ class ColorfulRabbits {
         for (int i = 0; i < replies.size(); i++) {
             values[replies[i]]++;
         }
-        for (auto i : values) {
-            std::cout << i.first << " " << i.second << std::endl;
-        }
+        // for (auto i : values) {
+        //     std::cout << i.first << " " << i.second << std::endl;
+        // }
         for (auto i : values) {
             if (i.first == 0) {
                 result+=i.second;

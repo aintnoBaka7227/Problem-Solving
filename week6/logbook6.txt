@@ -9,6 +9,8 @@ than 2 replies that share the same value, each pair of replies will be consider 
 the same color. There won't exist 3 replies with the same value that these mentioned rabbit will share the same color. I may use memoization
 to store the each value and track of number of time each value appear. may be using an unorder map.
 
-TroubleShootings:
+TroubleShootings: 
+Trial 1: my logic was incorrect. If there is more than 2 replies that share the same value, then there can only be a maximum of value + 1 replies
+that these replies will be considered as a group of rabbits with the same color. for example: 3 rabbits can reply "2" but not four. 
 
 Reflections:
