@@ -13,4 +13,7 @@ TroubleShootings:
 Trial 1: my logic was incorrect. If there is more than 2 replies that share the same value, then there can only be a maximum of value + 1 replies
 that these replies will be considered as a group of rabbits with the same color. for example: 3 rabbits can reply "2" but not four. 
 
-Reflections:
+Reflections: After trial 1 i got it. This problem is straight bruteforce with little mathematics. However, I midjudge some cases which lead to 
+failed result at first. It passed all the demo cases so it took me a while to realize my wrong logic. The main logic is when the number of rabbits
+with the same color will always be value + 1 for all cases. If number of replies with the same value is over value + 1, it means there is a new 
+group of rabbits with a different color which again has value + 1 rabbits. 
