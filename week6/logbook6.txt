@@ -1,0 +1,14 @@
+# this is a log book for week 6
+
+Target for this week: practice dynamic programming and prepare for exam 2. Time limit is applied. I will track my time limit.
+
+ColorfulRabbits problem: 
+Initial thoughts: I noticed that if a replied value is unique then there will be value rabbits. If the replied value is zero then there
+will only be 1 rabbit. If there are two similar replied value then the minimal number of rabbit will be value + 1. However, if there are more
+than 2 replies that share the same value, each pair of replies will be consider a group of rabbit with same color and these pairs won't share 
+the same color. There won't exist 3 replies with the same value that these mentioned rabbit will share the same color. I may use memoization
+to store the each value and track of number of time each value appear. may be using an unorder map.
+
+TroubleShootings:
+
+Reflections:
