@@ -25,6 +25,18 @@ each number appear(maximum 2 for each num) and one var to check the end result o
 in public function the recursive function will be called twice while in private function, it will be called 3 times to cover all combinations.
 
 TroubleShootings:
+Trial 1: nothing gone wrong
+
+Reflections: It worked. However I wonder if we can use dynamic programming for this problem as there are cases that duplicate others since elements
+in the expressions just switch positions. If I can figure how each time an expression is valid, I can calculate all related expressions so that 
+I don't have to recalculate them again. I will think about it another time.
+
+NiceOrUgly problem:
+Initial thoughts: This problem can be solved using backtracking. From the start index, I can keep checking if the 3 consecutive chars are vowel or the 5
+consecutive char are consonants. if there is one vowel then I don't have to check for consonants and and vice versa, and move the index to that char. For 
+each recusive call the index will increase by one. If 3 consecutive vowels are found then we don't need to check the rest and same for 5 consonants.
+
+TroubleShootings:
 Trial 1:
 
 Reflections:
