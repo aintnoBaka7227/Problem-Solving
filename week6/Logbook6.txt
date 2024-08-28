@@ -17,3 +17,16 @@ Reflections: After trial 1 i got it. This problem is straight bruteforce with li
 failed result at first. It passed all the demo cases so it took me a while to realize my wrong logic. The main logic is when the number of rabbits
 with the same color will always be value + 1 for all cases. If number of replies with the same value is over value + 1, it means there is a new 
 group of rabbits with a different color which again has value + 1 rabbits. 
+
+CountExpressions problem:
+Initial thoughts: My approach for now is recursive backtracking as I need to check all possible arithmetic expressions of the provided two numbers
+to compare with the target result. I will create another private funtion that take two input parameters, two new vars for counting number of times
+each number appear(maximum 2 for each num) and one var to check the end result of each arithmetic expression. Since there is 3 arithmetic operators and 2 nums,
+in public function the recursive function will be called twice while in private function, it will be called 3 times to cover all combinations.
+
+TroubleShootings:
+Trial 1:
+
+Reflections:
+
+
