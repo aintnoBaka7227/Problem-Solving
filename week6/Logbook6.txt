@@ -32,7 +32,10 @@ in the expressions just switch positions. If I can figure how each time an expre
 I don't have to recalculate them again. I will think about it another time.
 
 NiceOrUgly problem:
-Initial thoughts: This problem can be solved using backtracking or dynamic programming. 
+Initial thoughts: This problem can be solved using recursion or dynamic programming. for now I only have an idea on using recursion. The index start from 
+the start of the string, each time index move 1 I check whether if it is ?. if yes then both count for vowels and consonants increment, recursive call for each cases. 
+if not then check if vowels or not. if vowels then count for vowel increment and reset count for consonanants and vice versa. While I know that I can optimized my recursion to 
+reduce steps by also checking the following chars, for now I will play it safe.
 
 TroubleShootings:
 Trial 1:
