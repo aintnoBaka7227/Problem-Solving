@@ -38,8 +38,17 @@ if not then check if vowels or not. if vowels then count for vowel increment and
 reduce steps by also checking the following chars, for now I will play it safe.
 
 TroubleShootings:
-Trial 1:
+Trial 1: it got the right answers for all demos test case. But it seems like it did not pass the time limit for gradescope so it fails. I will try dynamic programming.
+anothere problem is I was recalculating whenever I hit a ?, as my code duplicated when I check ? or uppercase chars so that might cause time and space inefficient.
 
-Reflections:
+Trial 2: For dynamic programming, my approach is similar as I create a dp table dp[51][4][6][2] to track current position in string, current number of consecutive
+vowels, consonants and state: ugly or not. each time a valid position is hit (which is true), I will check if the current char is ? or not, and check the count of consecutive
+vowels and consonants so far. If the condition is met, reset count of vowels and consonants based on conditions, and the next position based on the current one will be marked as true.
+
+Trial 3: everything i fine for case where nice appears or 42 but for case on have ugly i failed. I found out that for nice I only need to check the last element
+while for ugly, I need to check if ugly appear in anywhere inside the table.
+
+Reflections: Again i got into the trap of duplication where recursion is not efficient anymore due to replicated calculations. What i realized is that every dp problems
+start from recursion, but optimized to reuse calculations so that it won't be overflow. However, using dp is very hard.
 
 
