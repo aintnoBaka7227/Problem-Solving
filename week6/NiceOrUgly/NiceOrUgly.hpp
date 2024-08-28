@@ -61,31 +61,39 @@ class NiceOrUgly {
                             if (s[index] == '?') {
                                 if (count_v + 1 == 3) {
                                     dp[index+1][count_v+1][0][1] = true;
+                                    // std::cout << "ugly: " << index + 1 << std::endl;
                                 }
                                 else {
                                     dp[index+1][count_v+1][0][0] = true;
+                                    // std::cout << "count_v" << count_v + 1 << std::endl;
                                 }
                                 if (count_c + 1 == 5) {
                                     dp[index+1][0][count_c+1][1] = true;
+                                    // std::cout << "ugly: " << index + 1 << std::endl;
                                 }
                                 else {
                                     dp[index+1][0][count_c+1][0] = true;
+                                    // std::cout << "count_c" << count_c + 1 << std::endl;
                                 }
                             }
                             if (vowels.find(s[index]) != vowels.end()) {
                                 if (count_v + 1 == 3) {
                                     dp[index+1][count_v+1][0][1] = true;
+                                    // std::cout << "ugly: " << index + 1 << std::endl;
                                 }
                                 else {
                                     dp[index+1][count_v+1][0][0] = true;
+                                    // std::cout << "count_v" << count_v + 1 << std::endl;
                                 } 
                             }
                             else {
                                 if (count_c + 1 == 5) {
                                     dp[index+1][0][count_c+1][1] = true;
+                                    // std::cout << "ugly: " << index + 1 << std::endl;
                                 }
                                 else {
                                     dp[index+1][0][count_c+1][0] = true;
+                                //     std::cout << "count_c" << count_c + 1 << std::endl;
                                 }
                             }
                         }
