@@ -67,4 +67,8 @@ And then count the rest. However, this is insufficient because I have to resolve
 counting all jump nums from 1 to low, counting all jum nums from 1 to high, and take the differ between the former and latter for final result. This way I can create private function
 to perform calculation and resuse it, and also only have to resolve the digit condition for the high rather than doing it twice include the low. 
 
-Reflections: 
+Reflections: Initializing dp table is not hard since I met it before. However, the part where I have to count number of jump nums based on high isvery hard to implement. If this question 
+is in B part in the exam, I can confidently confirm that I won't be albe to do it in such time frame.
+
+Weekly dialog: All questions I attempted so far for this week were hard. Using dp is not my advantage, since I could not design the dp table in a shortamount of time. I will practice other 
+questions to see if it improve. If not then to prepare for the exam, I may need to return to recursion and memoization to solve dp problem.
