@@ -39,7 +39,7 @@ reduce steps by also checking the following chars, for now I will play it safe.
 
 TroubleShootings:
 Trial 1: it got the right answers for all demos test case. But it seems like it did not pass the time limit for gradescope so it fails. I will try dynamic programming.
-anothere problem is I was recalculating whenever I hit a ?, as my code duplicated when I check ? or uppercase chars so that might cause time and space inefficient.
+another problem is I was recalculating whenever I hit a ?, as my code duplicated when I check ? or uppercase chars so that might cause time and space inefficient.
 
 Trial 2: For dynamic programming, my approach is similar as I create a dp table dp[51][4][6][2] to track current position in string, current number of consecutive
 vowels, consonants and state: ugly or not. each time a valid position is hit (which is true), I will check if the current char is ? or not, and check the count of consecutive
@@ -51,4 +51,20 @@ while for ugly, I need to check if ugly appear in anywhere inside the table.
 Reflections: Again i got into the trap of duplication where recursion is not efficient anymore due to replicated calculations. What i realized is that every dp problems
 start from recursion, but optimized to reuse calculations so that it won't be overflow. However, using dp is very hard.
 
+JumpyNum problem:
+Initial thoughts: I believe this problem can be solve using dynamic programming. I can see a similar soving pattern like UnsealTheSafe. For each jump number, starting from the
+first digit, the number of digits can be used for the next digit is limited as the differ must be at least 2. so I can construct it like if it is 1, then the next one is in 
+the range [3,9], for 2 then it is [4, 9] and 0 and so on. And the procedure to select the next digit in a jump number will be duplicated over time, which can be express using a formula
+like dp[n][d] += dp[n-1][d] where n is the length of the jump num and d is the start. 
+e.g: DP[2][1] += DP[1][3] + DP[1][4] + DP[1][5] + DP[1][6] + DP[1][7] + DP[1][8] + DP[1][9].
+So with my dp table, i will count all posible cases, and compare the input values with the table to count the total number. Base on the requirements, my table will store till 
+the length of 10. Another thing that I am not sure is how can since low and high can have different number of digits, I may need to split it into comparing all numbers that number
+of digits is low and number of digits is equal to high.
 
+TroubleShootings: 
+Trial 1: I got into the problem where I need to check number of jump nums in [low, high]. At first I tried to count from low to the highest possible num with high.length - 1.
+And then count the rest. However, this is insufficient because I have to resolve checking digits in both high and low, which is hard and time consuming. So I change it into
+counting all jump nums from 1 to low, counting all jum nums from 1 to high, and take the differ between the former and latter for final result. This way I can create private function
+to perform calculation and resuse it, and also only have to resolve the digit condition for the high rather than doing it twice include the low. 
+
+Reflections: 
