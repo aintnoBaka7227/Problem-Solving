@@ -10,8 +10,7 @@ class JumpyNum {
         for (int len = 1; len < str_high.length(); len++) {
             for (int d = 1; d < 10; d++) {
                 count_high+=dp[len][d];
-                //std::cout << len << " " << d << std::endl;
-                // std::cout << count << std::endl;
+                //std::cout << len << " " << d << " " << count_high << std::endl;
             }
         }
         for (int index = 0; index < str_high.length(); index++) {
@@ -20,12 +19,13 @@ class JumpyNum {
                     continue;
                 }
                 count_high+=dp[str_high.length() - index][d];
-                //std::cout << str_high.length() << " " << d << " " << count_high;
+                //std::cout << index << " " << d << " " << count_high << std::endl;
             }
             if (index > 0 && abs(str_high[index] - str_high[index - 1]) < 2) {
                 break;
             }
         }
+        //std::cout << "count: " << high << " " << count_high << std::endl;
         return count_high;
     }
     public:

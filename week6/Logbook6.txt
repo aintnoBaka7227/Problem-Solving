@@ -67,8 +67,15 @@ And then count the rest. However, this is insufficient because I have to resolve
 counting all jump nums from 1 to low, counting all jum nums from 1 to high, and take the differ between the former and latter for final result. This way I can create private function
 to perform calculation and resuse it, and also only have to resolve the digit condition for the high rather than doing it twice include the low. 
 
+Trial 2: I got into problem with the part where I count total number of jump num with equal number of digits compare to high in count function. In the for loop condition, I tried
+d <= int(str_high[index] - '0') which was incorrect since it need to be strictly smaller than the current digit. I fixed that to <. Morever, in the inner for loop, I set 
+count_high+=dp[str_high.length() - index + 1][d] which was also incorrect. I fixed it to str_high.length() - index. This is because to ensure the jump num always smaller than high,
+when I tried to construct the jump num, I can only do it digit by digit, not just based entirely on the first digit. 
+
 Reflections: Initializing dp table is not hard since I met it before. However, the part where I have to count number of jump nums based on high isvery hard to implement. If this question 
-is in B part in the exam, I can confidently confirm that I won't be albe to do it in such time frame.
+is in B part in the exam, I can confidently confirm that I won't be albe to do it in such time frame. My solution worked but I think there should be an optimized solution based on mine.
+I need to calculate the entire table to the high of 2000000000, which is unecessary in most case. I should only calculate the table till the input high. I will try to improve my solution
+before the exam.
 
 Weekly dialog: All questions I attempted so far for this week were hard. Using dp is not my advantage, since I could not design the dp table in a shortamount of time. I will practice other 
 questions to see if it improve. If not then to prepare for the exam, I may need to return to recursion and memoization to solve dp problem.
