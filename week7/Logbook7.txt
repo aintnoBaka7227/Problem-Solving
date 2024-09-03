@@ -1,0 +1,17 @@
+# this is a log book for week 7
+# this week focus is greedy algorithm. If there are more times, look back on recursion, backtracking, dynamic programming
+
+PrefixFreeSets problem:
+Initial thoughts: I am using Brute Force and Greedy to solve this problem. I will use a nested for loop, the outer will loop through 
+each string, while the inner will loop through every string and check if whether two strings with different indexes are prefix of the other,
+if yes count - 1 (count is set to input array length for each outer loop). At the end of each outer loop, the count is stored in a vector.
+Then I sort the vector and return the smallest value.
+
+TroubleShootings:
+Trial 1: It failed. My logic was incorrect as sorting the result won't give me the number of words that appear in all combinations. I tried 
+another approach where first I use set to delete all duplicated words. Then I still use the same for loop, but track if each word can be 
+a prefix of another word, and store in a vector. At the end, I count all 0 appears in the vector and return it.
+
+Reflections:
+
+

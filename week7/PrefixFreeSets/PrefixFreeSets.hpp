@@ -33,7 +33,7 @@ class PrefixFreeSets {
         }
         int count = 0;
         for (auto result : results) {
-            std::cout << result << std::endl;
+            //std::cout << result << std::endl;
             if (!result) count++;
         }
         return count;
