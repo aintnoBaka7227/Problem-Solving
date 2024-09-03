@@ -25,6 +25,7 @@ class PrefixFreeSets {
                     if (unique[i].length() <= unique[j].length()) { 
                         if (unique[j].substr(0, unique[i].length()) == unique[i]){
                             result = 1;
+                            break;
                         }
                     }
                 }

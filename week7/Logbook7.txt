@@ -12,6 +12,8 @@ Trial 1: It failed. My logic was incorrect as sorting the result won't give me t
 another approach where first I use set to delete all duplicated words. Then I still use the same for loop, but track if each word can be 
 a prefix of another word, and store in a vector. At the end, I count all 0 appears in the vector and return it.
 
-Reflections:
+Reflections: I misjudge this problem. I only use Brute force at the end. I wonder if there is any greedy approach to reduce computational time. 
+The only thing I can improve is to break the inner for loop whenever the flag is reset to true. this is not a hard problem but the tricky part 
+might be to find all words that are not prefix of others.
 
 
