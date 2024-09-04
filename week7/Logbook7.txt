@@ -21,8 +21,9 @@ Initial thoughts: this is a greedy problem.Since the time t increment overtime, 
 and descending to customer 1. I will sort the tip array in ascending order and loop over it, calculate tip[i] - t each loop and add sum.
 
 TroubleShootings:
+Trial 1: nothing need to be fix.
 
-Reflections:
+Reflections: This question is rather easy and a typical question for greedy algorithm.
 
 
 
