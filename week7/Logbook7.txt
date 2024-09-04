@@ -16,4 +16,13 @@ Reflections: I misjudge this problem. I only use Brute force at the end. I wonde
 The only thing I can improve is to break the inner for loop whenever the flag is reset to true. this is not a hard problem but the tricky part 
 might be to find all words that are not prefix of others.
 
+TaliluluCoffee problem:
+Initial thoughts: this is a greedy problem.Since the time t increment overtime, the best straegy is to let the customer with largest index upfront
+and descending to customer 1. I will sort the tip array in ascending order and loop over it, calculate tip[i] - t each loop and add sum.
+
+TroubleShootings:
+
+Reflections:
+
+
 
