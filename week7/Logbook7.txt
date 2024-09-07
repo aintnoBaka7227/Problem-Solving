@@ -25,5 +25,13 @@ Trial 1: nothing need to be fix.
 
 Reflections: This question is rather easy and a typical question for greedy algorithm.
 
+LostParentheses problem:
+Initial thoughts: This might be a greedy problem. I am not sure if it is correct but starting from the first "-", all following numbers will be minus
+so my approach is to add all numbers before the first "-" and then minus all
+
+TroubleShootings: 
+
+Reflections: 
+
 
 
