@@ -30,8 +30,19 @@ Initial thoughts: This might be a greedy problem. I am not sure if it is correct
 so my approach is to add all numbers before the first "-" and then minus all
 
 TroubleShootings: 
+Trial 1: it worked. nothing to change.
 
-Reflections: 
+Reflections: Greedy work. This is just a trick question, where you realize that every nums after the '-' sign can be put into a Parentheses. I just need
+to remember how to use string stream for future exams.
+
+ShipBoxes problem:
+Initial thoughts: My idea is to check all possible permutations of dimensions for each box. Let say x y z are the dimensions of box1, a b c are dimensions of
+box2. For each permutation, I check the max value of x and a, y and b to get the first two dimension of the big box. This can be done in a nested for loop.
+For the depth, it will be the sum of the other two dimensions of both box. The final price is the smallest possible. This approach is Brute force. 
+
+TroubleShootings:
+Trial 1: 
+
 
 
 
