@@ -41,8 +41,15 @@ box2. For each permutation, I check the max value of x and a, y and b to get the
 For the depth, it will be the sum of the other two dimensions of both box. The final price is the smallest possible. This approach is Brute force. 
 
 TroubleShootings:
-Trial 1: 
+Trial 1: I did not sort the dimension of box 3, which lead to not getting the smallest possible cost for each particular permutation. I applied sort to it and 
+seem to get the correct result
 
+Reflections: This problem is not hard but the trickiest part is to realize that I can get all possible permutation using nested loop and choosing pair of dimensions
+from both box. Missing the sort part will result in not getting the smallest possible cost for each permutation. There are 108 cases: 6 permutations For
+each box, 2 box, and 3 cases for double layer. My way of doing it, I only need to consider 36 cases. No optimization straegy for this problem rather than this 
+so far.
 
+Weekly digest: For this week I focus on Greedy algorithm and seems like I did not struggle much on it. However, I could not practice for backtracking or dp, which is
+not good consider there is an exam next week. I will try having a look at the past few weeks questions to trace back my approaches and prepare for the exam.
 
 
