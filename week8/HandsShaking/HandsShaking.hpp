@@ -17,7 +17,7 @@ class HandsShaking {
 
         long result = 0; 
 
-        for (int i = 2; i <= n; i+=2) {
+        for (int i = n; i >= 2; i-=2) {
             result += recursiveCount(i-2)*recursiveCount(n-i);
         }
 

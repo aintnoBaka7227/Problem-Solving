@@ -2,9 +2,12 @@ this is a logbook for week 8
 the aim for this week is to focus on solving problems using divide and conquer 
 
 MatchNumberEasy problem:
-Initial thoughts:
+Initial thoughts: This can be done by tracking each possible digit and calculate remained matches. by doing this, all cases can be covered. This can be done recursively,
+and each calculated max_num will be stored in a map based on its length, and updated regularly after each recursive return.
 
 Troubleshootings: 
+Trial 1: My logic based on comparisons in length. Which means the return longer string is the largest. However, this cause bias as I did not remove trailing zeros,
+which lead to cases like "000000" become the largest rather than numbers like "20".  
 
 Reflections: 
 
@@ -20,4 +23,9 @@ than adding them together.
 
 Trial 2: I miss the case n = 0; since in the recursive function, without defining base case n=0 and return 1, I will miss the cases where there is no people left.
 
-Reflections:  
+Trial 3: Seems like the time limit was not met. This may due to duplicated calculations. I will try applying memoization.  
+
+Reflections: Appling memoization helps reduce calculation steps and made the limit time requirments. It tackles the problems of divide and conquer where duplicated
+calculations lead to time deficiency. 
+
+
