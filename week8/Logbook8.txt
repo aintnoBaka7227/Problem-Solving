@@ -1,0 +1,23 @@
+this is a logbook for week 8 
+the aim for this week is to focus on solving problems using divide and conquer 
+
+MatchNumberEasy problem:
+Initial thoughts:
+
+Troubleshootings: 
+
+Reflections: 
+
+HandsShaking problem:
+Initial thoughts: Since the constraint is not too wide, divide and conquer may work. I also notice that since it is a circle, we need to pick one person 
+as a flag, and start counting the based on the the remain groups on the left and right. If you choose a person k to shake hands, then we have a group of k-2 
+in the left and a group of n-k in the right. And keep doing that till everybody shake hands. This also make sure no cross shake is allowed. This seems like 
+a divide and conquer problem. 
+
+Troubleshootings: 
+Trial 1: I failed to recognize that when i seperate groups, this create two seperate subproblems rather, so I need to multiply the result from the rest, rather 
+than adding them together.
+
+Trial 2: I miss the case n = 0; since in the recursive function, without defining base case n=0 and return 1, I will miss the cases where there is no people left.
+
+Reflections:  
