@@ -46,9 +46,13 @@ And rather than go brute force to check all pairs, if there is any possible pair
 will always have a larger gap.
 
 Troubleshootings: 
-Trial 1: 
+Trial 1: It work properly so nothing gone wrong.
 
-Reflections: 
+Reflections: This is definitely a greedy problem. The tricky part is how to calculate the min number of problems by going from the first problem to the jth ones, and
+then calculate the min probs taken to go from jth to ith. Moreover, implementing the loop by picking a pivot in the outer loop help decrease the total number of cases
+needed to check
 
-Weekly Digest: 
+Weekly Digest: My plan was to practice divide and conquer. However, beside from Handshaking problem, I mostly solved all problems using memoization and recursion. 
+There was one intering question where I work on Greedy approach, which is something I like the most, but not my target for this week. I will try to retake all questions
+using Divide and Conquer in the future to practice for the exam.
 
