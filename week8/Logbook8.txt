@@ -37,5 +37,18 @@ Troubleshootings:
 Trial 1: My logic is incorrect. If I do it like this, I need to find the employee with no surbodinates first. I change my approach to Memoization + recursion. This 
 way, I can pick any employees and calculate the salary recursive as it will trace back to the one with no surbodinates, which will be equal to 1
 
+Reflections: It worked. However, I am solving this problem using memoization rather than Divide and Conquer. I will try to implement the solutions with Divide and 
+Conquer later if there is more time. 
+
+ProblemsToSolve problem: 
+Initial thougts: This can be solved using Greedy approach. We can use nested for loop to check pairs that has a gap >= variety, with the outer loop work as a pivot.
+And rather than go brute force to check all pairs, if there is any possible pairs found, we can break the outer loop immediately, as any possible pairs in the future
+will always have a larger gap.
+
+Troubleshootings: 
+Trial 1: 
+
 Reflections: 
+
+Weekly Digest: 
 
