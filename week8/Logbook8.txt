@@ -29,6 +29,13 @@ Trial 3: Seems like the time limit was not met. This may due to duplicated calcu
 Reflections: Appling memoization helps reduce calculation steps and made the limit time requirments. It tackles the problems of divide and conquer where duplicated
 calculations lead to time deficiency. 
 
+CorporationSalary problem: 
+Initial thoughts: This might be done using bruteforce. I can loop thorugh each rows, calculating the salary of each employee by adding the salaries of surbodinates.
+If this employee has no surbodinates then the salary will be 1 
 
+Troubleshootings: 
+Trial 1: My logic is incorrect. If I do it like this, I need to find the employee with no surbodinates first. I change my approach to Memoization + recursion. This 
+way, I can pick any employees and calculate the salary recursive as it will trace back to the one with no surbodinates, which will be equal to 1
 
+Reflections: 
 
