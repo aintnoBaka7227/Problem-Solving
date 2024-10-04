@@ -7,7 +7,8 @@ map to get the occurences, push in a vector and sort. Then using a while loop, I
 If not, then I will delete the max frequence letter one by one, and sort the array again and recalculate the roughness, decrement n by 1.
 
 TroubleShootings: 
-Trial 1: 
+Trial 1: I failed cases that are contradicted to the evil cases where there are multiple least values and n is largest than the sum of them. I fixed it by counting 
+the sum of these least value and check if n is larger than them. if yes then execute the part to delete least occurences. 
 
 Reflections: 
 
