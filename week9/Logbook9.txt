@@ -17,5 +17,20 @@ removing by comparing each frequence with the range, if it is outside the range 
 
 Trial 3: I failed some cases due to my range did not include the most frequence value. I changed the code to have it.
 
-Reflections: 
+Reflections: This problem costed me too much time. Mostly due to my Greedy approach did not cover all cases. However, I believe it is faster than my new Brute Force one, as 
+for the new one, i need to check everys single possible case, which many of them may not even need to check. I will try to reimplement my old solution if I have more time.
 
+SentenceDecomposition problem:
+Initial thoughts: This problem can be solve using Recursion. I can manually check if each valid words exists in the sentence by taking the substring with the same length
+and use sort to check if they contain same letters. Then i can try to calculate the min total transformation costs. After one is found, I can call the recursive function again 
+to find the rest. each substring after computation will be saved in a map to reuse again if the same string appear multiple times. This is to handle cases like "three, there"
+
+TroubleShootings: 
+Trial 1: Got into some problems with word checking to see if there is any matches between valid words and substring of the input sentence. However, I searched online
+and know that we can use sort() to check if they contain similar letter. 
+
+Trial 2: Did not check if the sentence string is long enough to take a substring out of it, lead to failure in case 5. Update the recursive function to check this condition.
+
+Trial 3: Got overflown due to using INT_MAX for cost comparision. change to a big enough num -> seem to work.
+
+Reflections: 
