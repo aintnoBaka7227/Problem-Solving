@@ -1,0 +1,13 @@
+// this is a log book for week 9
+This week focus is on designing graph solution
+
+RoughStrings problem:
+Initial thought: This might be a greedy problem. My idea is to find the most and least frequent letters and set the initial roughness. This can be done by using a 
+map to get the occurences, push in a vector and sort. Then using a while loop, I first check if the least occurences <= n, I deleted the letter update new n and roughness. 
+If not, then I will delete the max frequence letter one by one, and sort the array again and recalculate the roughness, decrement n by 1.
+
+TroubleShootings: 
+Trial 1: 
+
+Reflections: 
+
