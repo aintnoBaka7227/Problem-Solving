@@ -10,5 +10,10 @@ TroubleShootings:
 Trial 1: I failed cases that are contradicted to the evil cases where there are multiple least values and n is largest than the sum of them. I fixed it by counting 
 the sum of these least value and check if n is larger than them. if yes then execute the part to delete least occurences. 
 
+Trial 2: I failed again with the test case contradicted to the previous one, where the condition is met but it is still beneficial to decrement the largest rather 
+than delete all similar least frequent. My current approach will not be able to cover all cases. I changed my approach to a more brute force one, where I will 
+try to cover all ranges of least-most frequent by using a nested for loop. This way I can cover all possible roughness that can appear, and calculate the cost of
+removing by comparing each frequence with the range, if it is outside the range then I add the difference to the cost. 
+
 Reflections: 
 

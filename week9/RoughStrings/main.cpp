@@ -9,5 +9,6 @@ int main() {
     std::cout << test.minRoughness("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",17) << std::endl;
     std::cout << test.minRoughness("bbbccca",2) << std::endl;
     std::cout << test.minRoughness("jjtvjjjjjjjvjjvjjjvvjjkjvvvvvjj",5) << std::endl;
+    std::cout << test.minRoughness("abcdeefzzzzzzzzzzzzzzzz",6) << std::endl;
     return 0;
 }
