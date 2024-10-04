@@ -15,5 +15,7 @@ than delete all similar least frequent. My current approach will not be able to 
 try to cover all ranges of least-most frequent by using a nested for loop. This way I can cover all possible roughness that can appear, and calculate the cost of
 removing by comparing each frequence with the range, if it is outside the range then I add the difference to the cost. 
 
+Trial 3: I failed some cases due to my range did not include the most frequence value. I changed the code to have it.
+
 Reflections: 
 

@@ -54,8 +54,8 @@ class RoughStrings {
     //         min_rough = most - least;
     //         //std::cout <<"delete most: " <<  min_rough << std::endl;
     //     }
-        for (int l = least; l < most; l++) {
-            for (int m = l; m < most; m++ ) {
+        for (int l = 1; l <= most; l++) {
+            for (int m = l; m <= most; m++ ) {
                 int temp_rough = m - l;
                 int remove_count = 0; 
                 for (int i = 0; i < num_occurence.size(); i++) {
