@@ -33,4 +33,7 @@ Trial 2: Did not check if the sentence string is long enough to take a substring
 
 Trial 3: Got overflown due to using INT_MAX for cost comparision. change to a big enough num -> seem to work.
 
-Reflections: 
+Reflections: Now it worked. I still wonder why INT_MAX does not work. However, this is a familiar question compare to probs I solved last week. With a little twist
+where I need to check if two string contain similar letters. I will solve more questions using this method to prepare for my final. 
+
+
