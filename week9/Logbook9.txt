@@ -44,4 +44,8 @@ will trace back to parent nodes till the top root is reached. If any parent node
 TroubleShootings: 
 Trial 1: I miss the part where parent cells won't exist anymore if they are splited, so I also need to mark them as dead. 
 
-Reflections: 
+Reflections: I tried to rewrite the nested for loop into a recursive function but it is not working. Another approach is to reconstruct the parent array into a binary three
+and write down the function for tree deletion. I will try this approach if I have more time, cause my current logic to identify whether a cell is dead or not based on parent cell
+is similar to deletion in tree. 
+
+
