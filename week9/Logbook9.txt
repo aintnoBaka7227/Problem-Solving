@@ -36,4 +36,12 @@ Trial 3: Got overflown due to using INT_MAX for cost comparision. change to a bi
 Reflections: Now it worked. I still wonder why INT_MAX does not work. However, this is a familiar question compare to probs I solved last week. With a little twist
 where I need to check if two string contain similar letters. I will solve more questions using this method to prepare for my final. 
 
+CellRemoval problem: 
+Initial thoughts: Took me some time to understand the problem. This problem can be solved using Brute Force approach. I can create another array that contains all the CellRemoval
+with a number to present its status (alive or dead) and mark the deleted cell as dead. Then I can use a nested loop, with the outer loop loop through each cell, and the inner loop
+will trace back to parent nodes till the top root is reached. If any parent node is equal to the deletedone, mark the current node status as dead and break the loop. 
 
+TroubleShootings: 
+Trial 1: I miss the part where parent cells won't exist anymore if they are splited, so I also need to mark them as dead. 
+
+Reflections: 
