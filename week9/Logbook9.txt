@@ -57,12 +57,18 @@ for the co authors, and then based on these authors to calculate erdos number fu
 To build a graph, I will implement adjacent lists by using an unordered map and set to implement the node for each author and connect the node with other coauthors.
 
 To calculate erdos number for authors, this can be done using queue, pushing "ERDOS" first. For any coauthors, we will increment erdo nums by one, and keep spanning queue. 
-Authors with erdo nums that are calculated will be pop out of the queue (first in first out). 
+Authors with erdo nums that are calculated will be pop out of the queue (first in first out). I can also use a map to store calculated authors' erdos number, since I don't want
+to recalculate it twice
 
 TroubleShootings: 
-Trial 1: 
+Trial 1: It worked! 
 
-Reflections: 
+Reflections: This problem approach is not a tricky one since I understand graph. However, the part where I need to calculate erdo numbers was very time consuming, as I need 
+to find the correct data structure that is efficient for finding coauthors and after all the coauthors are found and calculated, the author must be deleted. Queue seems to be 
+the most suitable one. 
 
-Weekly digest: 
+Weekly digest: There was only one problem that I can apply graph to solve it (ErdosNumber). However, spending time learning about the data structure was helpful, and working 
+on the assignment pushed me to think on what data structures should be used for different purposes, which was something missing in weekly practices. I also refreshed my skills
+on recursion and memoization working with RoughStrings and SentenceDecomposition. However, I would love to spend more time solving Graph problems, which was still lacking in this 
+week practice. 
 
