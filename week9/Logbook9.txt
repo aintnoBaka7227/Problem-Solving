@@ -49,3 +49,20 @@ and write down the function for tree deletion. I will try this approach if I hav
 is similar to deletion in tree. 
 
 
+ErdosNumber problem:
+Initial thoughts: This is definitely a graph problem. a graph contains all authors can be formed with authors in the same publications are connected to each other. This
+can be done using adjacent lists or a 2d array. Then I need to calculate the erdos number for each author, based on the publications contains erdos, to calulate the erdos number
+for the co authors, and then based on these authors to calculate erdos number further. For the output part, to sort the author name, I can use a set to store authors'names. 
+
+To build a graph, I will implement adjacent lists by using an unordered map and set to implement the node for each author and connect the node with other coauthors.
+
+To calculate erdos number for authors, this can be done using queue, pushing "ERDOS" first. For any coauthors, we will increment erdo nums by one, and keep spanning queue. 
+Authors with erdo nums that are calculated will be pop out of the queue (first in first out). 
+
+TroubleShootings: 
+Trial 1: 
+
+Reflections: 
+
+Weekly digest: 
+
