@@ -6,6 +6,22 @@ Initial thoughts: This problem can be solved using brute force. I can loop and s
 Then if two consecutive suit is similar, I can just check the values of them and swap if the next card value is smaller than the current card value. 
 
 TroubleShootings: 
-Trial 1: 
+Trial 1: Nothing crucial to fix. 
+
+Reflections: Brute force worked. However, using a faster sort algorithm like merge sort will improve time complexity. I will try to implement it later if I have enough
+time. 
+
+FoxAndMountainEasy problem:
+Initial thoughts: I felt like this one can be solved by recursively tracking all possible moves and check the return result with the history string. However, since
+we don't have to care about how many possible solutions we can get, we care more about if a possible solution with a substring similar to history string exists.
+So I think this one can be solved using math approach. Since the substring can be anywhere, I can calculate the current height after each move in the history. 
+If the height < 0 then I need to set it back to 0, cost 1 move. so I can use a var to track that. Then I can calculate the remain height and remain number of 
+moves. If the number of move < remain height then it is a NO. 
+
+TroubleShootings: 
+Trial 1: I failed test case 3, 5. After a while, I realized that my condition for NO was lacking. If the remain height is even, I will need an even number of moves for it
+and vice versa. 
+
+Trial 2: looked like it worked.
 
 Reflections: 
