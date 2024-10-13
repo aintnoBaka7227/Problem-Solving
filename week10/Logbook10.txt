@@ -24,4 +24,7 @@ and vice versa.
 
 Trial 2: looked like it worked.
 
-Reflections: 
+Reflections: Another reasons why I thoughts this one should not be solved by checking all possible cases is because we also don't need to care about how many 
+combinations will work. The order of moves in history also doesn't matter. I hope the during final exams the question will be similar cause I like math problem. 
+But I will try implement the solution using backtracking approach in case questions in the final ask me to produce all possible moves. 
+
