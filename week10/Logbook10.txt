@@ -1,0 +1,11 @@
+# this is a log book for week 10
+# this week focus will be graph but also look back on dynamic programming if possible
+
+BridgeSort problem:
+Initial thoughts: This problem can be solved using brute force. I can loop and sort the hand string based on the suit. This can be done using bubble sort. 
+Then if two consecutive suit is similar, I can just check the values of them and swap if the next card value is smaller than the current card value. 
+
+TroubleShootings: 
+Trial 1: 
+
+Reflections: 
