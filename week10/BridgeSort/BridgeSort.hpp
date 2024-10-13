@@ -4,7 +4,7 @@
 #include <vector> 
 #include <string>
 
-class Bridgesort {
+class BridgeSort {
     private:
     std::vector<char> suits = {'C', 'D', 'H', 'S'};
     std::vector<char> values = {'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T'
