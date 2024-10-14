@@ -28,3 +28,33 @@ Reflections: Another reasons why I thoughts this one should not be solved by che
 combinations will work. The order of moves in history also doesn't matter. I hope the during final exams the question will be similar cause I like math problem. 
 But I will try implement the solution using backtracking approach in case questions in the final ask me to produce all possible moves. 
 
+DengklekBuildingRoads problems:
+Initial thoughts: After a few tries, I saw some patterns: 
+(1, 2)
+(1, 3), (2, 3)
+(1, 4), (2, 4), (3, 4)
+...
+(i-K, i), (i-K+1, i), ..., (i-1, i)
+This looks like a dynamic programming problem, we also need to track if the number of road to the current house is odd or even, and we only need to track 
+from i-k to i since node from 1 to i-K-1 will not be considered due to the constrain K, so they won't be affected. Also when we move to i+1, we just need
+to pass along the state where i-K is even. To track all of this, I create a dp table [i][j][k][bit] to track the house number, the remaining number of roads,
+the current gap between two houses (to compare with K) and a dimension to track odd, even of k+1 houses in the range (using bit for convenience) since the state 
+will change containuously for each house. This table is large enough to cover all cases from house i-k+1 to i. bit track parity of houses i-k to i. 
+For the particular case where k= K-1, we need to see whether connect the current house i with the furthest house is possible, if the current house is odd then a 
+road can not be built, and we set it to 0, else then it is possible to build a road and we won't need to track the parity for the furthest house any more, right-shift the bit
+For k < K-1, we still consider more houses, so we handle the transition state as mentioned above, = [i][j+1][k][bit] where we increment number of edges by 1 but remain
+the current state. 
+After this, to consider adding a road to the current pair of house i-(k+1) , i. If j > 0, mean there is still more edges to use, so we update [i][j][k][bit] by adding
+dp[i][j - 1][k] while the bit is also updated since we also add a new house i-(k+1) to consideration, and we also need to flip the bit of all houses in consideration
+bit ^ (1 << (k + 1)) ^ (1 << 0)
+
+Trial 1: it failed some cases and I realized there was overflown issues with the dp table, so I added a modulo MOD like the description and take the module of the 
+dp value. It worked!
+
+Reflection: this problem is the hardest one I have ever tried. I could not implement the solution by myself, need to read the source code and comments of previous 
+posts related to this problem. The idea of using bit to handle continous switch between odd and even was brilliant. I learnt a lot from using this, and using ^ to flip
+the bit. However, if I have to implement solution like this in the exam, with my current ability, I won't be able to handle it. The solution might look simple, but
+the amount of time behind it was massive. 
+
+
+
