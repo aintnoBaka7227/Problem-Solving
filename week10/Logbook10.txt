@@ -48,13 +48,27 @@ After this, to consider adding a road to the current pair of house i-(k+1) , i. 
 dp[i][j - 1][k] while the bit is also updated since we also add a new house i-(k+1) to consideration, and we also need to flip the bit of all houses in consideration
 bit ^ (1 << (k + 1)) ^ (1 << 0)
 
+TroubleShootings:
 Trial 1: it failed some cases and I realized there was overflown issues with the dp table, so I added a modulo MOD like the description and take the module of the 
 dp value. It worked!
 
 Reflection: this problem is the hardest one I have ever tried. I could not implement the solution by myself, need to read the source code and comments of previous 
-posts related to this problem. The idea of using bit to handle continous switch between odd and even was brilliant. I learnt a lot from using this, and using ^ to flip
+posts related to this problem. The idea of using bit to handle continous switch between odd and even (parity) was brilliant. I learnt a lot from using this, and using ^ to flip
 the bit. However, if I have to implement solution like this in the exam, with my current ability, I won't be able to handle it. The solution might look simple, but
 the amount of time behind it was massive. 
+
+BridgeSort problem: 
+Initial thoughts: This is a very intersting problem. what I realize is that this problem can be reverse. rather than trying to find and destroy roads with minimum 
+effort, I can instead based on the road input array, I will only build roads that cost the maximum effort that won't connect two occupied towns. To do this I will 
+use a boolean graph to track if two towns i j are connected. to check if two towns is connected directly or indirectly, I will use Floyd-Warshall algorithm to check 
+using a third town k, temps[i][j]||(temps[i][k] && temps[k][j]). then I sort the efforts the build roads in ascending order, loop through the sorted array and every
+single time, I check if a road is constructed, will it connect two occupied town. If not then continuee building, if yes then I won't build the road, adding to the 
+return result. This turn the problem into a greedy + graph problem. 
+
+TroubleShootings:
+Trial 1: 
+
+Reflection: 
 
 
 
