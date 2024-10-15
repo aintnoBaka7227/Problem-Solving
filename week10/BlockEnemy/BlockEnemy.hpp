@@ -38,20 +38,27 @@ class BlockEnemy {
     }
 
     bool is_connected(std::vector<std::vector<bool>> &paths, std::vector<std::vector<bool>> &temps, std::vector<int> occupiedTowns) {
-        for(int i = 0; i < paths[0].size(); i++)
-           for(int j = 0; j < paths[0].size(); j++)
-              temps[i][j]=paths[i][j];
+        for(int i = 0; i < paths[0].size(); i++) {
+            for(int j = 0; j < paths[0].size(); j++) {
+                temps[i][j]=paths[i][j];
+            }
+        }
 
-           for(int k = 0; k < paths[0].size(); k++)
-             for(int i = 0; i < paths[0].size(); i++)
-              for(int j = 0; j < paths[0].size(); j++)
-                temps[i][j]=temps[i][j]||(temps[i][k] && temps[k][j]);
+        for(int k = 0; k < paths[0].size(); k++){
+            for(int i = 0; i < paths[0].size(); i++) {
+                for(int j = 0; j < paths[0].size(); j++) {
+                    temps[i][j]=temps[i][j]||(temps[i][k] && temps[k][j]);
+                }
+            } 
+        }
 
-           for(int i = 0; i<occupiedTowns.size(); i++)
-             for(int j = i + 1; j < occupiedTowns.size(); j++)
-               if(paths[occupiedTowns[i]][occupiedTowns[j]])
-                  return false;
-
-           return true;
+        for(int i = 0; i<occupiedTowns.size(); i++) {
+            for(int j = i + 1; j < occupiedTowns.size(); j++) {
+                if(temps[occupiedTowns[i]][occupiedTowns[j]]) {
+                    return false;
+                }
+            }         
+        }
+        return true;
     }
 };
