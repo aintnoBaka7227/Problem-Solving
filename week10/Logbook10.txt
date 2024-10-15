@@ -66,9 +66,15 @@ single time, I check if a road is constructed, will it connect two occupied town
 return result. This turn the problem into a greedy + graph problem. 
 
 TroubleShootings:
-Trial 1: 
+Trial 1: I try to use a single NxN array for both road constructions and Floyd-Warshall algorithm but it produced wrong results. I will try to use a temp array for
+this to see if the bug is fixed. seems like the problem is after I tried to check if town i and j is connected after adding a road, the result will remain there instead
+of return to its original states, which is not something I want as the towns are connected, one change in state may result in new unwanted connections. 
 
-Reflection: 
+Trial 2: Got into problems with how to store the effort and two towns into a single array, after searching I decided to use pair and it worked. 
+
+Reflection: Seems like this approach worked. However, the problem is the time complexity is too big O(n^3), which is not efficient at all with large input. I am searching
+for a way to reduce the number of steps needed to check if two occupied town is connected, since everysingle time a road is added, it need to use Floyd-Warshall again.
+
 
 
 
