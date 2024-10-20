@@ -75,6 +75,8 @@ Trial 2: Got into problems with how to store the effort and two towns into a sin
 Reflection: Seems like this approach worked. However, the problem is the time complexity is too big O(n^3), which is not efficient at all with large input. I am searching
 for a way to reduce the number of steps needed to check if two occupied town is connected, since everysingle time a road is added, it need to use Floyd-Warshall again.
 
-
+Last week digest: this is the last practice assignment for the whole course. I have strengthen my understanding of graph a little more, but 
+there is still a long way to go for both graph and dynamic programming. Any problems beside from above will be for my preparation for the final 
+exam for the course. I will try do more problems before the exams. Also working on max flow, min cut cause I think it can be used to solve the bonus problem for this week. 
 
 
