@@ -80,3 +80,5 @@ there is still a long way to go for both graph and dynamic programming. Any prob
 exam for the course. I will try do more problems before the exams. Also working on max flow, min cut cause I think it can be used to solve the bonus problem for this week. 
 
 
+Practice problems for exams(extra): 
+BigBurger
